@@ -23,7 +23,6 @@ class CRUDTest {
 
         assertThat(response.statusCode()).isEqualTo(HttpStatus.CREATED.value());
     }
-
     @Test
     void read() {
         create();
