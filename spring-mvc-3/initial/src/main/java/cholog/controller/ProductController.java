@@ -16,6 +16,10 @@ public class ProductController {
         return ResponseEntity.ok().build();
     }
 
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<Void> badRequest(IllegalArgumentException e){
+        return ResponseEntity.badRequest().build();
+    }
     @GetMapping("/products/{id}")
     public ResponseEntity<Void> getProduct(@PathVariable Long id) {
         if (true) {
